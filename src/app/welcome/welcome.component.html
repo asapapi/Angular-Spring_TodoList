@@ -1,0 +1,17 @@
+ <h1>Welcome</h1>
+<div class="container"><h1>Welcome {{name}} to my Todo Application</h1>
+
+You can manage your daily activities in one platform
+<a routerLink="/todos">here</a>
+</div>
+
+ <div class="container" >
+
+   Click here to get a cutomized welcome message
+   <button (click)="getWelcomeMessageWithParameter()">Get Welcome Message </button>
+ </div>
+
+ <div class="container" *ngIf="welcomeMessageFromService">
+   <H2> Your Customize Welcome Message</H2>
+   {{welcomeMessageFromService}}
+ </div>
